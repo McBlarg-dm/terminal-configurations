@@ -1,6 +1,5 @@
 set t_Co=256
 set backspace=indent,eol,start
-let g:airline_theme = "darcula"
 set tabstop=2 "number of visual spaces per <TAB>
 set expandtab "tabs are spaces
 set number "show line numbers
@@ -12,4 +11,12 @@ set relativenumber " I believe this will show how far away a line is from where 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 syntax enable "enable syntax processing
-colorscheme py-darcula
+
+"https://github.com/junegunn/vim-plug Write the file then run :PlugInstall
+call plug#begin()
+
+Plug 'doums/darcula'
+
+call plug#end()
+
+colorscheme darcula
